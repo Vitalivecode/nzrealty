@@ -1,0 +1,184 @@
+.talign-r{text-align:right !important;}
+
+.mxw-720{max-width:720px !important;}
+.agent-ainfo{color: #696969 !important;}
+
+.agent-dp{
+height: 100%;
+border-radius: 60px;
+}
+
+
+.w-72px{width: 72px !important;}
+.h-72{height:72px !important;}
+.w-50px{width: 50px !important;}
+
+.badge{
+padding: 4px 8px !important;
+font-size: 0.7rem !important;
+}
+
+.border-color-input {
+  border-color: #a9a9a9 !important;
+}
+
+.dashboard-wrapper .db-sidebar {
+  flex: 0 1 260px !important;
+  max-width: 260px !important;
+}
+
+.dashboard-wrapper .db-sidebar .sticky-area{width: 260px !important;}
+.sidebar-item-icon{width:25px !important;}
+
+/*  .nav-link{padding:0.5rem !important;}   */
+
+#map {  height: 364px !important;}
+
+#map-01, #map-02, #map-03, #map-04, #map-05, #map-06 {  height: 487px !important;}
+
+
+.sup-cat-img{height: 120px !important; width: 100% !important;}
+.supser-list .badge{letter-spacing: 0.3px !important; text-transform: none !important;}
+
+.h-lg-80{height: 80px !important;}
+
+@media only screen and (max-width: 600px) {
+  
+}
+
+/***** Google Map ******/
+/*#description {*/
+/*  font-family: Roboto;*/
+/*  font-size: 15px;*/
+/*  font-weight: 300;*/
+/*}*/
+
+
+.gmnoprint, .gmnoscreen, .gm-style-cc, .gm-style-cc, .pac-logo:after {
+    display: none !important;
+}
+.gm-bundled-control, .gm-bundled-control .gmnoprint{
+    display: block !important;
+}
+img[alt~="Google"] {
+    display: none !important;
+}
+
+#infowindow-content .title {
+  font-weight: bold;
+}
+
+#infowindow-content {
+  display: block;
+}
+
+#map #infowindow-content {
+  display: inline;
+}
+
+.pac-card {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  font-family: Roboto;
+  padding: 0;
+}
+
+#pac-container {
+  padding-bottom: 12px;
+  margin-right: 12px;
+}
+
+.pac-controls {
+  display: inline-block;
+  padding: 5px 11px;
+}
+
+.pac-controls label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 0px;
+  padding: 20px 13px;
+  text-overflow: ellipsis;
+  width: 70%;
+  top: 0px !important;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+/*#title {*/
+/*  color: #fff;*/
+/*  background-color: #4d90fe;*/
+/*  font-size: 25px;*/
+/*  font-weight: 500;*/
+/*  padding: 6px 12px;*/
+/*}*/
+
+#target {
+  width: 345px;
+}
+
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#origin-input,
+#destination-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#origin-input:focus,
+#destination-input:focus {
+  border-color: #4d90fe;
+}
+
+#mode-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  margin-left: 12px;
+  padding: 5px 11px 0px 11px;
+}
+
+#mode-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.btn-light.disabled, .btn-light:disabled {
+    color: #ffffff !important;
+    background-color: #797d80 !important;
+    border-color: #f8f9fa !important;
+}
+.swal-text {
+  text-align: center;
+}

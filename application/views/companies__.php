@@ -1,0 +1,1 @@
+<?php if($companies != false){} ?>
