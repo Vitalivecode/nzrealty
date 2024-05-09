@@ -3,9 +3,9 @@
 class GPS_config
 {
     // default connection
-    public static $dbname = 'psworksi_realestate'; // Your database name
-    public static $dbuser = 'psworksi_realestate'; // Your database username
-    public static $dbpass = 'psworksi_realestate'; // // Your database password
+    public static $dbname = 'realestate'; // Your database name
+    public static $dbuser = 'root'; // Your database username
+    public static $dbpass = 'Sloka!2020'; // // Your database password
     public static $dbhost = 'localhost'; // Your database host, 'localhost' is default.
     
     
