@@ -2,15 +2,14 @@
     RewriteEngine On
 
     # Redirect to HTTPS if not already using HTTPS
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Ensure the correct DirectoryIndex
     DirectoryIndex index.php
 
     # Exclude specific files and directories from being rewritten
-    RewriteCond %{REQUEST_URI} !^/index\.php
-    RewriteCond %{REQUEST_URI} !\.(swf|jpg|jpeg|png|gif|bmp|ico|txt|css|js)$
+    RewriteCond $1 !^(index\.php|robots\.txt|favicon\.ico|css|js|img|downloads|jquery|forums|(.*)\.swf)$
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
 
