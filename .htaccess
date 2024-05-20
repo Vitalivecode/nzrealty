@@ -9,7 +9,7 @@
     DirectoryIndex index.php
 
     # Exclude specific files and directories from being rewritten
-    RewriteCond $1 !^(index\.php|robots\.txt|favicon\.ico|css|js|img|downloads|jquery|forums|(.*)\.swf)$
+    RewriteCond %{REQUEST_URI} !^(index\.php|robots\.txt|favicon\.ico|css|js|img|downloads|jquery|forums|(.*)\.swf)$
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
 
