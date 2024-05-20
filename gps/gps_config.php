@@ -188,7 +188,7 @@ class GPS_config
     // FCM Pranay
     public static $fcm_access_key = 'AAAA0Bg6i-k:APA91bEqs8oQRDzpGMQbcrqHd_c5VDvYbNPmFBlDdAZQaCAXUIdq2AFFFoIX1JrCKyJWJxPAxLnEoaa1SSj7ImVl0gmGBDF7i02Pwpi7A2A0pAy1fwcIxZitGWTC-Paj6p6rbjm3J8Ew';
     // Base_url Pranay
-    public static $base_url = 'https://rentallistings.co.nz/vitadev/';
+    public static $base_url = 'https://ps4works.in/clients/nzrealty/';
     
     // anti XSS
     public static $auto_xss_filtering = false; // enable all GPS's POST and GET data filtering
