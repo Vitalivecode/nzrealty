@@ -23,10 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$ark_root  = "https://".$_SERVER['HTTP_HOST'];
-echo $ark_root.'@';
+$ark_root  = "https://".$_SERVER['SERVER_NAME'];
 $ark_root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-echo $ark_root.'@';
 $config['base_url'] = $ark_root;
 echo $ark_root;
 $config['admin_url'] = $ark_root.'admin/';
