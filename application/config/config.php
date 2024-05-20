@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 // $ark_root  = "https://".$_SERVER['HTTP_HOST'];
-$ark_root  = "https://rentallistings.co.nz/vitadev";
+$ark_root  = "https://rentallistings.co.nz";
 $ark_root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
 $config['base_url'] = $ark_root;
 $config['admin_url'] = $ark_root.'admin/';
