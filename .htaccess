@@ -1,16 +1,8 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-
-    # Redirect to HTTPS if not already
-    RewriteCond %{HTTPS} !=on
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-    # Remove index.php from URL
-    RewriteCond %{REQUEST_URI} ^system.*
-    RewriteRule ^(.*)$ index.php/$1 [L]
-
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ index.php/$1 [L]
-</IfModule>
+DirectoryIndex index.php
+RewriteEngine on
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
+RewriteCond $1 !^(index\.php|(.*)\.swf|forums|img|css|downloads|jquery|js|robots\.txt|favicon\.ico)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ ./index.php?$1 [L,QSA]
