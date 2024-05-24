@@ -24,13 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 $ark_root  = "https://".$_SERVER['HTTP_HOST'];
-echo $ark_root;
 $ark_root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
-echo "@";
-echo $ark_root;
-$ark_root .= 'index.php';
-echo "@@";
-echo $ark_root;
 $config['base_url'] = $ark_root;
 $config['admin_url'] = $ark_root.'admin/';
 
