@@ -23,8 +23,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$ark_root  = "https://".$_SERVER['HTTP_HOST']."/vitadev/index.php";
-$ark_root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+// $ark_root  = "https://".$_SERVER['HTTP_HOST'];
+// $ark_root .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
+$ark_root  = "https://rentallistings.co.nz/vitadev/index.php";
 $config['base_url'] = $ark_root;
 $config['admin_url'] = $ark_root.'admin/';
 
