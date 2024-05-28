@@ -1,8 +1,6 @@
 RewriteEngine On
 
 # Redirect to HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Main rewrite rules
 RewriteCond $1 !^(index\.php|(.*)\.swf|forums|img|css|downloads|jquery|js|robots\.txt|favicon\.ico)
