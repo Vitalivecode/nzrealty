@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Redirect to HTTPS
-RewriteBase /
+RewriteBase /vitadev/
 RewriteCond %{HTTP:SSL} !=1 [NC]
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
