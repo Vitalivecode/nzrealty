@@ -444,8 +444,8 @@ class Cms extends CI_Controller {
 			}
 			if($tablename != 'settings')
 			    $gps->highlight_row('status','=','0','#f2616187');
-            $data['output'] = $gps->render();
 			var_dump($data);
+            $data['output'] = $gps->render();
             $this->load->view(ADMIN . 'edit',$data);
         }
         else
