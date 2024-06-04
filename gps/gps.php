@@ -1783,6 +1783,7 @@ class GPS
         {
             $this->task = 'list';
         }
+        echo $this->task;
         switch ($this->task)
         {
             case 'create':
