@@ -7437,7 +7437,6 @@ class GPS
             $title = $this->html_safe($this->_humanize($fieldname));
         }
         $path = $this->get_image_folder($field) . '/' . $tmp_name;
-        echo $path."@@@@@@@@@@";
         list($width, $height) = getimagesize($path);
         $ratio = isset($this->upload_config[$field]['ratio']) ? $this->upload_config[$field]['ratio'] : '';
         $attr = array(
@@ -11069,9 +11068,7 @@ class GPS
     protected function save_file_to_tmp($file, $filename, $field)
     {
         $filename = substr($filename, 0, strrpos($filename, '.')) . '.tmp';
-        echo $filename."filename";
         $file_path = $this->get_image_folder($field) . '/' . $filename;
-        echo $file_path."file_path";
         move_uploaded_file($file['tmp_name'], $file_path);
 
         if ($this->after_upload)
