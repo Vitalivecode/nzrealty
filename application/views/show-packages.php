@@ -1,4 +1,4 @@
-    <?php if(isset($small) && $small == 6){ ?><div class="row"><h4 class="ml-3 mb-4 fs-18 lh-15 text-heading">Choose a package that suits your business </h4></div><?php } ?>
+    <?php if(isset($small) && $small == 6){ ?><div class="row"><h4 class="ml-3 mb-4 fs-18 lh-15 text-heading">Choose a package that suits your business </h4><br><h6>Free subscription for first 12 months, If registered before Date 31st December 2024.</h6></div><?php } ?>
     <div class="row">
         <?php $no=1; foreach($packages as $package){ ?>
             <div class="col-xl-4 col-sm-<?=isset($small)?12:6;?> mb-6">
