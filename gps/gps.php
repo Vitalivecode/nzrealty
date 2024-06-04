@@ -1752,23 +1752,16 @@ class GPS
     public function render($task = false, $primary = false)
     {
         $this->benchmark_start();
-        echo "benchmark_start";
         $this->_receive_post($task, $primary);
-        echo "_receive_post";
         $this->_regenerate_key();
-        echo "_regenerate_key";
         $this->_remove_and_save_uploads();
-        echo "_remove_and_save_uploads";
         $this->_get_language();
-        echo "_get_language";
         $this->_get_theme_config();
-        echo "_get_theme_config";
         if ($this->query)
         {
             return $this->render_custom_query_task();
         }
         $this->_get_table_info();
-        echo "_get_table_info";
         return $this->_run_task();
     }
 
@@ -1783,7 +1776,6 @@ class GPS
         {
             $this->task = 'list';
         }
-        echo $this->task;
         switch ($this->task)
         {
             case 'create':
