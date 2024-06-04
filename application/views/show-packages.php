@@ -4,7 +4,7 @@
             <div class="col-xl-4 col-sm-<?=isset($small)?12:6;?> mb-6">
     <!--    <div class="col-xl-<?=isset($small)?$small:3;?> col-sm-<?=isset($small)?12:6;?> mb-6">      -->
                 <label class="d-block m-0">
-                    <input type="radio" name="package" value="<?=$package->sno;?>" <?=($no == 1)?'selected checked':'';?> class="card-input-element" />
+                    <input type="radio" name="package" value="<?=$package->sno;?>" <?=($no == 2)?'selected checked':'';?> class="card-input-element" />
                     <div class="card bg-gray-01 border-0 p-3 overflow-hidden card-input">
                         <div class="card-header bg-transparent p-0">
                             <p class="fs-15 font-weight-600 text-heading mb-0"><?=$package->name;?></p>
