@@ -368,6 +368,7 @@ class Cms extends CI_Controller {
 			    }
 			    $amnty = array();
 			    $amenities = $this->get->table('p_amenities', array('status' => 1));
+				var_dump($amenities);exit;
 			    if($amenities != false)
 			    {
 			        foreach($amenities as $amenity)
