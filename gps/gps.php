@@ -879,7 +879,6 @@ class GPS
     }
     public function change_type($fields = '', $type = '', $default = false, $attr = array())
     {
-        echo $fields."@@@@";
         if ($type)
         {
             $fdata = $this->_parse_field_names($fields, 'change_type');

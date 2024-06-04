@@ -397,6 +397,8 @@ class Cms extends CI_Controller {
 			    $gps->set_attr('floor_area,toilets',array('class' => 'gps-input commercial'));
 			    $gps->before_update('property_gst_outgoings');
 			    $gps->before_insert('property_gst_outgoings');
+				echo "amentities";
+				var_dump($amenities);exit;
 			    $gps->set_attr('apply_link',array('class'=>'gps-input url'));
 			    $gps->button(admin_url('cms/property-visits?property={sno}'),'View Visits','fa fa-clock fa-fw','',array('target'=>'_self','data-toggle'=>'tooltip'));
 			}
