@@ -1763,6 +1763,7 @@ class GPS
         }
         $this->_get_table_info();
         echo "1765";
+        var_dump($this->_run_task());
         return $this->_run_task();
     }
 
