@@ -1763,6 +1763,7 @@ class GPS
         }
         $this->_get_table_info();
         echo "1765";
+        echo $this->db->last_query();
         var_dump($this->_run_task());
         echo "12345";
         echo $this->db->last_query();
