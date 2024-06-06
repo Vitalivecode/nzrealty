@@ -1762,6 +1762,7 @@ class GPS
             return $this->render_custom_query_task();
         }
         $this->_get_table_info();
+        echo "1765";
         return $this->_run_task();
     }
 
@@ -1862,6 +1863,7 @@ class GPS
                 return $this->_list();
                 break;
         }
+        echo "1866";
     }
     protected function render_custom_query_task()
     {
@@ -2040,6 +2042,7 @@ class GPS
             $this->after_render();
             return $contents;
         }
+        echo "2043";
     }
     protected function after_render()
     {
@@ -3649,6 +3652,7 @@ class GPS
         }
 
         $this->_set_column_names();
+        echo "3652";
         return $this->_render_list();
     }
     /** defines primary condition for internal usage */
@@ -5151,6 +5155,7 @@ class GPS
         include ($view_file);
         $this->data = ob_get_contents();
         ob_end_clean();
+        echo "5155";
         return $this->render_output();
     }
 
