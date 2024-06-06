@@ -1763,7 +1763,6 @@ class GPS
         }
         $this->_get_table_info();
         echo "1765";
-        echo $this->db->last_query();
         var_dump($this->_run_task());
         echo "12345";
         echo $this->db->last_query();
@@ -1863,8 +1862,11 @@ class GPS
                 break;
             case 'list':
             default:
+            echo "1866_2";
                 var_dump($this->_set_field_types('list'));
+                echo "1866_3";
                 return $this->_list();
+                echo "1866_4";
                 break;
         }
         echo "1866";
