@@ -1862,8 +1862,8 @@ class GPS
                 break;
             case 'list':
             default:
-            echo "1866_2";
-                var_dump($this->_set_field_types('list'));
+                echo "1866_2";
+                $this->_set_field_types('list');
                 echo "1866_3";
                 return $this->_list();
                 echo "1866_4";
@@ -4826,7 +4826,7 @@ class GPS
                 }
             }
 
-            //echo'<pre>'.print_r($fields,true).'</pre>';
+            echo'<pre>'.print_r($fields,true).'</pre>';
 
             if (!$this->primary_key)
             {
