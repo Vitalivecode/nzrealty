@@ -1764,6 +1764,8 @@ class GPS
         $this->_get_table_info();
         echo "1765";
         var_dump($this->_run_task());
+        echo "12345";
+        echo $this->db->last_query();
         return $this->_run_task();
     }
 
@@ -1860,7 +1862,7 @@ class GPS
                 break;
             case 'list':
             default:
-                $this->_set_field_types('list');
+                var_dump($this->_set_field_types('list'));
                 return $this->_list();
                 break;
         }
