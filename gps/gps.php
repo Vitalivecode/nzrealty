@@ -1757,6 +1757,7 @@ class GPS
         $this->_remove_and_save_uploads();
         $this->_get_language();
         $this->_get_theme_config();
+        echo "<pre>";var_dump($this->query);echo "</pre>";
         if ($this->query)
         {
             return $this->render_custom_query_task();
