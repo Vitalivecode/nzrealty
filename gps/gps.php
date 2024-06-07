@@ -1762,6 +1762,10 @@ class GPS
             return $this->render_custom_query_task();
         }
         $this->_get_table_info();
+        echo "1765";
+        var_dump($this->_run_task());
+        echo "12345";
+        echo $this->db->last_query();
         return $this->_run_task();
     }
 
@@ -1858,10 +1862,14 @@ class GPS
                 break;
             case 'list':
             default:
+                echo "1866_2";
                 $this->_set_field_types('list');
+                echo "1866_3";
                 return $this->_list();
+                echo "1866_4";
                 break;
         }
+        echo "1866";
     }
     protected function render_custom_query_task()
     {
@@ -2040,6 +2048,7 @@ class GPS
             $this->after_render();
             return $contents;
         }
+        echo "2043";
     }
     protected function after_render()
     {
@@ -3649,6 +3658,7 @@ class GPS
         }
 
         $this->_set_column_names();
+        echo "3652";
         return $this->_render_list();
     }
     /** defines primary condition for internal usage */
@@ -4816,7 +4826,7 @@ class GPS
                 }
             }
 
-            //echo'<pre>'.print_r($fields,true).'</pre>';
+            echo'<pre>'.print_r($fields,true).'</pre>';
 
             if (!$this->primary_key)
             {
@@ -4825,6 +4835,7 @@ class GPS
                 else
                 { // changed to prevent data rewriting
                     //$this->primary_key = $this->table_info[$this->table][0]['Field'];
+                    echo "111".$this->task;
                     switch ($this->task)
                     {
                         case 'list':
@@ -5151,6 +5162,7 @@ class GPS
         include ($view_file);
         $this->data = ob_get_contents();
         ob_end_clean();
+        echo "5155";
         return $this->render_output();
     }
 
