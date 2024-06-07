@@ -3605,6 +3605,7 @@ class GPS
     /** grid processing */
     protected function _list()
     {
+        echo "this->is_list".$this->is_list;
         if (!$this->is_list)
         {
             return self::error('Forbidden');
