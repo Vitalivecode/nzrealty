@@ -3615,10 +3615,15 @@ class GPS
         $this->search_columns = $this->columns;
         }*/
         $select = $this->_build_select_list();
+        echo "<br> select".$select;
         $table_join = $this->_build_table_join();
+        echo "<br> table_join".$table_join;
         $where = $this->_build_where();
+        echo "<br> where".$where;
         $order_by = $this->_build_order_by();
+        echo "<br> order_by".$order_by;
         $sum_tmp = array();
+        echo "<br> this->sum".$this->sum;
         if ($this->sum)
         {
             foreach ($this->sum as $field => $param)
