@@ -3,10 +3,10 @@
 class GPS_config
 {
     // default connection
-    public static $dbname = 'realestate'; // Your database name
-    public static $dbuser = 'root'; // Your database username
+    public static $dbname = 'vitasoft_realestate'; // Your database name
+    public static $dbuser = 'vitasoft_realestate'; // Your database username
     public static $dbpass = 'Sloka!2020'; // // Your database password
-    public static $dbhost = 'localhost'; // Your database host, 'localhost' is default.
+    public static $dbhost = '78.128.43.160'; // Your database host, 'localhost' is default.
     
     
     // theme and language
