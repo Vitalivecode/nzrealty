@@ -3635,7 +3635,9 @@ class GPS
             }
         }
         $sum = $sum_tmp ? ', ' . implode(', ', $sum_tmp) : '';
+        echo "<br> sum".$sum;
         $db = GPS_db::get_instance($this->connection);
+        echo "<br> db".$db;
         //$db->query("SELECT COUNT(`{$this->table}`.`{$this->primary_key}`) AS `count` {$sum} \r\n FROM `{$this->table}`\r\n {$table_join}\r\n {$where}");
         $db->query("SELECT COUNT(*) AS `count` {$sum} \r\n FROM `{$this->table}`\r\n {$table_join}\r\n {$where}");
         $this->sum_row = $db->row();

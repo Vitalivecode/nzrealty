@@ -59,7 +59,7 @@ class GPS_db
     public function query($query = '')
     {
         $this->result = $this->connect->query($query, MYSQLI_USE_RESULT);
-        //echo '<pre>' . $query . '</pre>';
+        echo '<pre> queryyy' . $query . '</pre>';
         if ($this->connect->error)
             $this->error($this->connect->error . '<pre>' . $query . '</pre>');
         return $this->connect->affected_rows;
