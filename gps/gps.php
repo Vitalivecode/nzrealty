@@ -3656,7 +3656,8 @@ class GPS
                 call_user_func_array($this->before_list['callable'], array($this->result_list, $this));
             }
         }
-
+        echo "dbbbbbbbbb ".$db;
+        echo "query ".$db->last_query();
         $this->_set_column_names();
         echo "3652";
         return $this->_render_list();
@@ -4835,7 +4836,6 @@ class GPS
                 else
                 { // changed to prevent data rewriting
                     //$this->primary_key = $this->table_info[$this->table][0]['Field'];
-                    echo "111".$this->task;
                     switch ($this->task)
                     {
                         case 'list':
@@ -4857,8 +4857,10 @@ class GPS
                     }
                 }
             }
+            echo "@#@#";var_dump($field);
             unset($fields);
         }
+        echo "@#@##";var_dump($field);
     }
     protected function _define_field_type($row, $field_index)
     {
