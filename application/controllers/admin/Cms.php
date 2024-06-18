@@ -379,7 +379,8 @@ class Cms extends CI_Controller {
 			    //$gps->column_cut(2,'aminities');
 			    $gps->change_type('bond', 'price', '', array('prefix'=>'$'));
 			    $gps->change_type('price', 'price', '', array('prefix'=>'$'));
-			    $gps->relation('agent','agents_landlords','sno',array('name','companyname'),array('status' => '1'),'','',' ','','type','role');
+			    $abc = $gps->relation('agent','agents_landlords','sno',array('name','companyname'),array('status' => '1'),'','',' ','','type','role');
+				var_dump($abc);
 			    $gps->relation('assignto','agents_landlords','sno',array('name','companyname'),array('status' => '1'),'','',' ','','type','role');
 			    $gps->columns(array('agent','role','type','p_type','address','region','district','suburb','featured','premium','boost','bedrooms','bathrooms','parkings','carport','offshoreparking','floor_area','sqft','built_year','tenants','available_from','title','description','other','features','duration','balconies','toilets','aminities','apply_link','assignto','txnid','txnamount','txndate','txnstatus','property_status','created_date','status'),false);
 			    $gps->fields(array('role','agent','type','p_type','bedrooms','bathrooms','parkings','carport','offshoreparking','floor_area','sqft','built_year','tenants','available_from','address','region','district','suburb','title','description','featured','premium','boost','other','features','duration','balconies','toilets','aminities','apply_link','assignto','pointer','txnid','txnamount','txndate','txnstatus','property_status','created_date','status'),false);
