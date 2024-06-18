@@ -6495,6 +6495,9 @@ class GPS
             $db->query('SELECT `' . $this->relation[$name]['rel_field'] . '` AS `field`,' . $name_select . $this->
                 get_relation_tree_fields($this->relation[$name]) . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` ' . $where .
                 ' GROUP BY `field` ORDER BY ' . $this->get_relation_ordering($this->relation[$name]));
+            echo 'SELECT `' . $this->relation[$name]['rel_field'] . '` AS `field`,' . $name_select . $this->
+                get_relation_tree_fields($this->relation[$name]) . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` ' . $where .
+                ' GROUP BY `field` ORDER BY ' . $this->get_relation_ordering($this->relation[$name]);
             $options = $this->resort_relation_opts($db->result(), $this->relation[$name]);
             if ($this->lists_null_opt)
             {
@@ -6548,8 +6551,6 @@ class GPS
         }
         $db->query('SELECT ' . $field . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` WHERE `' . $this->relation[$name]['rel_field'] .
             '` ' . $where . ' GROUP BY `' . $this->relation[$name]['rel_field'] . '`');
-        echo 'SELECT ' . $field . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` WHERE `' . $this->relation[$name]['rel_field'] .
-            '` ' . $where . ' GROUP BY `' . $this->relation[$name]['rel_field'] . '`';
         $options = $db->result();
         $out = array();
         foreach ($options as $opt)
