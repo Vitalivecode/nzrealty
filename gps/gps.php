@@ -2527,7 +2527,7 @@ class GPS
             if ($data)
                 $this->pass_var['edit'][$pkey]['tmp_value'] = $this->replace_text_variables($param['value'], $data);
         }
-
+echo $db->last_query()."@#@#@#";
         return $this->_render_details($mode);
     }
 

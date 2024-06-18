@@ -380,26 +380,30 @@ class Cms extends CI_Controller {
 			    $gps->change_type('bond', 'price', '', array('prefix'=>'$'));
 			    $gps->change_type('price', 'price', '', array('prefix'=>'$'));
 			    $gps->relation('agent','agents_landlords','sno',array('name','companyname'),array('status' => '1'),'','',' ','','type','role');
-			    $abc = $gps->relation('assignto','agents_landlords','sno',array('name','companyname'),array('status' => '1'),'','',' ','','type','role');
-				echo "@<br>";
-				echo $gps->db->last_query()."@@<br>";
+			    $gps->relation('assignto','agents_landlords','sno',array('name','companyname'),array('status' => '1'),'','',' ','','type','role');
 			    $gps->columns(array('agent','role','type','p_type','address','region','district','suburb','featured','premium','boost','bedrooms','bathrooms','parkings','carport','offshoreparking','floor_area','sqft','built_year','tenants','available_from','title','description','other','features','duration','balconies','toilets','aminities','apply_link','assignto','txnid','txnamount','txndate','txnstatus','property_status','created_date','status'),false);
 			    $gps->fields(array('role','agent','type','p_type','bedrooms','bathrooms','parkings','carport','offshoreparking','floor_area','sqft','built_year','tenants','available_from','address','region','district','suburb','title','description','featured','premium','boost','other','features','duration','balconies','toilets','aminities','apply_link','assignto','pointer','txnid','txnamount','txndate','txnstatus','property_status','created_date','status'),false);
 			    $gps->change_type('txnamount', 'price', '', array('prefix'=>'$'));
 			    $gps->modal(array('aminities'=>'fa fa-th'));
+				echo "6 <br>";
 			    $gps->change_type('aminities','checkboxes','',array('values' => $amnty));
 			    $gps->field_callback('aminities','property_aminities');
 			    $gps->column_callback('other','property_others');
 			    $gps->field_callback('other','property_gst');
+				echo "5 <br>";
 			 //   $gps->field_tooltip('features','{ "pet":"yes", "smokers":"yes", "furnished":"yes", "compliant":"yes" }');
 			    $gps->column_callback('features','property_others');
 			    $gps->field_callback('features','property_features');
 			    $gps->set_attr('type',array('id' => 'property_type'));
+				echo "4 <br>";
 			    $gps->set_attr('bedrooms,carport,offshoreparking,built_year,tenants',array('class' => 'gps-input residential'));
 			    $gps->set_attr('floor_area,toilets',array('class' => 'gps-input commercial'));
 			    $gps->before_update('property_gst_outgoings');
+				echo "3 <br>";
 			    $gps->before_insert('property_gst_outgoings');
+				echo "2 <br>";
 			    $gps->set_attr('apply_link',array('class'=>'gps-input url'));
+				echo "1 <br>";
 			    $gps->button(admin_url('cms/property-visits?property={sno}'),'View Visits','fa fa-clock fa-fw','',array('target'=>'_self','data-toggle'=>'tooltip'));
 			}
 			if($tablename == 'property_visits')
