@@ -6467,6 +6467,7 @@ class GPS
             $options = false;
             if ($this->lists_null_opt)
             {
+                var_dump($values);echo "@";
                 foreach ($values as $val)
                 {
                     $out .= $this->open_tag(array(
@@ -9397,8 +9398,6 @@ class GPS
         $field_names = array();
         if ($fields)
         {
-            echo $table."<br>";
-            var_dump($fields);echo "<br>";
             if (!$table)
             {
                 $table = $this->_get_table($location);
