@@ -6445,6 +6445,7 @@ class GPS
                 foreach ($this->relation[$name]['rel_where'] as $field => $val)
                 {
                     $val = $this->replace_text_variables($val, $this->result_row);
+                    echo $this->relation[$name]['rel_tbl'];
                     $fdata = $this->_parse_field_names($field, 'create_relation', $this->relation[$name]['rel_tbl']);
                     $fitem = reset($fdata);
                     $where_arr[] = $this->_where_field($fitem) . $this->_cond_from_where($field) . $db->escape($val);
@@ -6495,6 +6496,9 @@ class GPS
             $db->query('SELECT `' . $this->relation[$name]['rel_field'] . '` AS `field`,' . $name_select . $this->
                 get_relation_tree_fields($this->relation[$name]) . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` ' . $where .
                 ' GROUP BY `field` ORDER BY ' . $this->get_relation_ordering($this->relation[$name]));
+            echo 'SELECT `' . $this->relation[$name]['rel_field'] . '` AS `field`,' . $name_select . $this->
+                get_relation_tree_fields($this->relation[$name]) . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` ' . $where .
+                ' GROUP BY `field` ORDER BY ' . $this->get_relation_ordering($this->relation[$name]);
             $options = $this->resort_relation_opts($db->result(), $this->relation[$name]);
             if ($this->lists_null_opt)
             {
@@ -6514,12 +6518,6 @@ class GPS
             }
         }
         $out .= $this->close_tag($tag);
-        var_dump($out);
-        echo "out <br/>";
-        var_dump($options);
-        echo "options <br/>";
-        echo $db->last_query();
-        echo "last_query <br/>";
         unset($options);
         return $out;
     }
@@ -6554,6 +6552,8 @@ class GPS
         }
         $db->query('SELECT ' . $field . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` WHERE `' . $this->relation[$name]['rel_field'] .
             '` ' . $where . ' GROUP BY `' . $this->relation[$name]['rel_field'] . '`');
+        echo 'SELECT ' . $field . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` WHERE `' . $this->relation[$name]['rel_field'] .
+            '` ' . $where . ' GROUP BY `' . $this->relation[$name]['rel_field'] . '`';
         $options = $db->result();
         $out = array();
         foreach ($options as $opt)
