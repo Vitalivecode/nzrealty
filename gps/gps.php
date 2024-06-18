@@ -6467,7 +6467,6 @@ class GPS
             $options = false;
             if ($this->lists_null_opt)
             {
-                var_dump($values);echo "@";
                 foreach ($values as $val)
                 {
                     $out .= $this->open_tag(array(
