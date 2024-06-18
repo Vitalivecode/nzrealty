@@ -2456,6 +2456,7 @@ class GPS
 
         $db = GPS_db::get_instance($this->connection);
         $db->query("SELECT {$select}\r\n FROM `{$this->table}`\r\n {$table_join}\r\n {$where}\r\n LIMIT 1");
+        echo "SELECT {$select}\r\n FROM `{$this->table}`\r\n {$table_join}\r\n {$where}\r\n LIMIT 1"."@<br>";
         $this->result_row = array_merge((array )$db->row(), $postdata);
 
         // moved here to support conditions for buttons
@@ -2527,7 +2528,7 @@ class GPS
             if ($data)
                 $this->pass_var['edit'][$pkey]['tmp_value'] = $this->replace_text_variables($param['value'], $data);
         }
-echo $db->last_query()."@#@#@#";
+
         return $this->_render_details($mode);
     }
 
