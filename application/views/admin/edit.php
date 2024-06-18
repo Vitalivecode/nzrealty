@@ -6,7 +6,7 @@
                     </div>
                     <div class="col-lg-9 col-md-8 col-md-8 col-xs-12">
                         <ol class="breadcrumb">
-                            <li><a href="<?=base_url();?>">Home</a></li>
+                            <li><a href="<?=base_url();?>">Homeeee</a></li>
                             <li class="active"><?=$title;?></li>
                         </ol>
                     </div>
