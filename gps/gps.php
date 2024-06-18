@@ -6445,10 +6445,11 @@ class GPS
                 foreach ($this->relation[$name]['rel_where'] as $field => $val)
                 {
                     $val = $this->replace_text_variables($val, $this->result_row);
-                    echo $this->relation[$name]['rel_tbl']."@@@";
                     $fdata = $this->_parse_field_names($field, 'create_relation', $this->relation[$name]['rel_tbl']);
                     $fitem = reset($fdata);
                     $where_arr[] = $this->_where_field($fitem) . $this->_cond_from_where($field) . $db->escape($val);
+                    var_dump($where_arr);
+                    echo "@@@<br>";
                 }
             }
             else
