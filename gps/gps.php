@@ -6501,9 +6501,6 @@ class GPS
                 $out .= $this->open_tag(array('tag' => 'option', 'value' => '')) . $this->lang('null_option') . $this->close_tag('option');
             }
         }
-        $db->query('select * from agents_landlords');
-        $dataa = $db->result();
-        var_dump($dataa);echo "@@";
         if ($options)
         {
             foreach ($options as $opt)
@@ -6551,6 +6548,8 @@ class GPS
         }
         $db->query('SELECT ' . $field . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` WHERE `' . $this->relation[$name]['rel_field'] .
             '` ' . $where . ' GROUP BY `' . $this->relation[$name]['rel_field'] . '`');
+        echo 'SELECT ' . $field . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` WHERE `' . $this->relation[$name]['rel_field'] .
+            '` ' . $where . ' GROUP BY `' . $this->relation[$name]['rel_field'] . '`';
         $options = $db->result();
         $out = array();
         foreach ($options as $opt)
