@@ -6501,6 +6501,9 @@ class GPS
                 $out .= $this->open_tag(array('tag' => 'option', 'value' => '')) . $this->lang('null_option') . $this->close_tag('option');
             }
         }
+        $db->query('select * from agents_landlords');
+        $dataa = $db->result();
+        var_dump($dataa);echo "@@";
         if ($options)
         {
             foreach ($options as $opt)
