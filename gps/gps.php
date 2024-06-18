@@ -6446,7 +6446,6 @@ class GPS
                 {
                     $val = $this->replace_text_variables($val, $this->result_row);
                     $fdata = $this->_parse_field_names($field, 'create_relation', $this->relation[$name]['rel_tbl']);
-                    var_dump($fdata);echo "@@@<br>";
                     $fitem = reset($fdata);
                     $where_arr[] = $this->_where_field($fitem) . $this->_cond_from_where($field) . $db->escape($val);
                 }
@@ -6463,11 +6462,17 @@ class GPS
         }
         $out .= $this->open_tag($tag, $this->theme_config('relation_field'), $this->field_attr[$name], true);
 
+        echo $this->relation[$name]['depend_on'];
+        echo "@@@<br>";
+        echo $dependval;
+        echo "@@<br>";
         if ($this->relation[$name]['depend_on'] && $dependval === false)
         {
             $options = false;
             if ($this->lists_null_opt)
             {
+                var_dump($values);
+                echo "@<br>";
                 foreach ($values as $val)
                 {
                     $out .= $this->open_tag(array(
