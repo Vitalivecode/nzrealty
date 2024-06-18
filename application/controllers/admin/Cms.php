@@ -381,7 +381,6 @@ class Cms extends CI_Controller {
 			    $gps->change_type('price', 'price', '', array('prefix'=>'$'));
 			    $gps->relation('agent','agents_landlords','sno',array('name','companyname'),array('status' => '1'),'','',' ','','type','role');
 			    $abc = $gps->relation('assignto','agents_landlords','sno',array('name','companyname'),array('status' => '1'),'','',' ','','type','role');
-				var_dump($abc);
 				echo "@<br>";
 				echo $gps->db->last_query()."@@<br>";
 			    $gps->columns(array('agent','role','type','p_type','address','region','district','suburb','featured','premium','boost','bedrooms','bathrooms','parkings','carport','offshoreparking','floor_area','sqft','built_year','tenants','available_from','title','description','other','features','duration','balconies','toilets','aminities','apply_link','assignto','txnid','txnamount','txndate','txnstatus','property_status','created_date','status'),false);
