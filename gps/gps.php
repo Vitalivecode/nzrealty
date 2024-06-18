@@ -6514,6 +6514,12 @@ class GPS
             }
         }
         $out .= $this->close_tag($tag);
+        var_dump($out);
+        echo "out <br/>";
+        var_dump($options);
+        echo "options <br/>";
+        echo $db->last_query();
+        echo "last_query <br/>";
         unset($options);
         return $out;
     }

@@ -57,8 +57,6 @@ jQuery(document).on("gpsafterrequest",function(event,container){
                 var fieldValue = value.replace(/(^\w+:|^)\/\//, '');
                 jQuery(this).val(fieldValue);
             });
-            alert("edit create");
-            alert(fieldValue);
         }
         if(GPS.current_task == 'edit')
         {
@@ -67,8 +65,6 @@ jQuery(document).on("gpsafterrequest",function(event,container){
                 var urlValue = url.replace('https://','');
                 jQuery(this).val(urlValue);
             });
-            alert("edit");
-            alert(urlValue);
         }
     }
     <?php if(isset($scripts)){ echo $scripts; } ?>
