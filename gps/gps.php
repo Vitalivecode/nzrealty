@@ -6446,7 +6446,6 @@ class GPS
                 {
                     $val = $this->replace_text_variables($val, $this->result_row);
                     $fdata = $this->_parse_field_names($field, 'create_relation', $this->relation[$name]['rel_tbl']);
-                    var_dump($fdata);
                     $fitem = reset($fdata);
                     $where_arr[] = $this->_where_field($fitem) . $this->_cond_from_where($field) . $db->escape($val);
                 }
@@ -9398,6 +9397,8 @@ class GPS
         $field_names = array();
         if ($fields)
         {
+            echo $table."<br>";
+            var_dump($fields);echo "<br>";
             if (!$table)
             {
                 $table = $this->_get_table($location);
