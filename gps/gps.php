@@ -6497,6 +6497,10 @@ class GPS
                 get_relation_tree_fields($this->relation[$name]) . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` ' . $where .
                 ' GROUP BY `field` ORDER BY ' . $this->get_relation_ordering($this->relation[$name]));
             $options = $this->resort_relation_opts($db->result(), $this->relation[$name]);
+            echo 'SELECT `' . $this->relation[$name]['rel_field'] . '` AS `field`,' . $name_select . $this->
+                get_relation_tree_fields($this->relation[$name]) . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` ' . $where .
+                ' GROUP BY `field` ORDER BY ' . $this->get_relation_ordering($this->relation[$name]);
+                echo "@@<br>";
             var_dump($$options);echo "@2<br>";
             if ($this->lists_null_opt)
             {
