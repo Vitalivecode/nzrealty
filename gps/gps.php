@@ -557,6 +557,7 @@ class GPS
     public function relation($fields = '', $rel_tbl = '', $rel_field = '', $rel_name = '', $rel_where = array(), $order_by = false,
         $multi = false, $rel_concat_separator = ' ', $tree = false, $depend_field = '', $depend_on = '')
     {
+        echo $rel_tbl."@1";
         if ($fields && $rel_tbl && $rel_field && $rel_name)
         {
             if ($depend_on)
@@ -565,6 +566,8 @@ class GPS
                 $depend_on = key($fdata) /*$fdata[0]['table'] . '.' . $fdata[0]['field']*/;
             }
             $fdata = $this->_parse_field_names($fields, 'relation');
+            var_dump($fdata);
+            echo $rel_tbl."@2";
             foreach ($fdata as $fitem)
             {
                 $this->relation[$fitem['table'] . '.' . $fitem['field']] = array(
