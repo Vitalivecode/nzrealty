@@ -6467,7 +6467,6 @@ class GPS
             $options = false;
             if ($this->lists_null_opt)
             {
-                var_dump($values);echo "@1<br>";
                 foreach ($values as $val)
                 {
                     $out .= $this->open_tag(array(
@@ -6497,11 +6496,6 @@ class GPS
                 get_relation_tree_fields($this->relation[$name]) . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` ' . $where .
                 ' GROUP BY `field` ORDER BY ' . $this->get_relation_ordering($this->relation[$name]));
             $options = $this->resort_relation_opts($db->result(), $this->relation[$name]);
-            echo 'SELECT `' . $this->relation[$name]['rel_field'] . '` AS `field`,' . $name_select . $this->
-                get_relation_tree_fields($this->relation[$name]) . ' FROM `' . $this->relation[$name]['rel_tbl'] . '` ' . $where .
-                ' GROUP BY `field` ORDER BY ' . $this->get_relation_ordering($this->relation[$name]);
-                echo "@@<br>";
-            var_dump($$options);echo "@2<br>";
             if ($this->lists_null_opt)
             {
                 $out .= $this->open_tag(array('tag' => 'option', 'value' => '')) . $this->lang('null_option') . $this->close_tag('option');
@@ -6742,7 +6736,7 @@ class GPS
             '` AS `field`,' . $name_select . ' FROM `' . $this->fk_relation[$name]['rel_tbl'] . '` ' . $where .
             ' GROUP BY `field` ORDER BY ' . $order_by);
         $options = $db->result();
-        var_dump($options);echo "@3<br>";
+
         if ($this->lists_null_opt)
         {
             $out .= $this->open_tag(array('tag' => 'option', 'value' => '')) . $this->lang('null_option') . $this->close_tag('option');
@@ -10390,7 +10384,6 @@ class GPS
                 $attr['style'] = 'display:none;';
             }
             $out .= $this->open_tag('span', $this->theme_config('search_container'), $attr);
-            var_dump($out);echo "@4<br>";
             if (GPS_config::$search_all)
             {
                 $optlist[] = $this->open_tag('option', '', array('value' => '')) . $this->lang('all_fields') . $this->close_tag('option');
@@ -10412,7 +10405,6 @@ class GPS
                             $name = $this->html_safe($this->_humanize($tmp['field']));
                     }
                     $attr = array('value' => $field, 'data-type' => $this->field_type[$field]);
-                    var_dump($$attr);echo "@5<br>";
                     if ($field == $this->column)
                     {
                         $attr['selected'] = '';
@@ -10423,7 +10415,6 @@ class GPS
             }
             elseif ($this->search_default !== false) // not only 'all'
             {
-                var_dump($this->columns_names);echo "@6<br>";
                 foreach ($this->columns_names as $field => $title)
                 {
                     $attr = array('value' => $field, 'data-type' => $this->field_type[$field]);
@@ -10445,7 +10436,6 @@ class GPS
             }
             else
             {
-                var_dump($attr);echo "@7<br>";
                 $out .= $this->open_tag('select', 'gps-columns-select ' . $this->theme_config('search_fieldlist'), $attr);
                 //$out .= $this->open_tag('option', '', array('value' => '')) . $this->lang('all_fields') . $this->close_tag('option');
                 $out .= implode('', $optlist);
@@ -10519,14 +10509,12 @@ class GPS
                     $attr['type'] = 'select';
                     $fieldlist['bool'] = $this->open_tag('select', $class . ' ' . $this->theme_config('search_phrase_dropdown'), $attr);
                     $attr = array('value' => 1);
-                    var_dump($attr);echo "@8<br>";
                     if ($phrase == 1)
                     {
                         $attr['selected'] = '';
                     }
                     $fieldlist['bool'] .= $this->open_tag('option', '', $attr) . $this->lang('bool_on') . $this->close_tag('option');
                     $attr = array('value' => 0);
-                    var_dump($attr);echo "@9<br>";
                     if ($phrase == 0)
                     {
                         $attr['selected'] = '';
@@ -10564,7 +10552,6 @@ class GPS
                                 $attr_rs['selected'] = '';
                             }
                             $curr_range = $this->get_range($range);
-                            var_dump($curr_range);echo "@10<br>";
                             if ($curr_range)
                             {
                                 $attr_rs['data-from'] = $curr_range['from'];
@@ -10614,7 +10601,6 @@ class GPS
                         else
                         {
                             $opt_attr = array('value' => $optkey);
-                            var_dump($opt_attr);echo "@11<br>";
                             if ($optkey == $phrase && $field == $this->column)
                             {
                                 $opt_attr['selected'] = '';
@@ -10630,7 +10616,6 @@ class GPS
                     {
                         $opt = trim($opt, '\'');
                         $opt_attr = array('value' => $opt);
-                        var_dump($opt_attr);echo "@12<br>";
                         if ($opt == $phrase && $field == $this->column)
                         {
                             $opt_attr['selected'] = '';
