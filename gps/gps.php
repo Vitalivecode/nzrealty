@@ -4521,12 +4521,14 @@ class GPS
     {
         $this->table_info = array();
         $db = GPS_db::get_instance($this->connection);
+        echo $this->table."@@";
         $db->query("SHOW COLUMNS FROM `{$this->table}`");
         $this->table_info[$this->table] = $db->result();
         if ($this->join)
         {
             foreach ($this->join as $alias => $join)
             {
+                echo $join['join_table']."@@@";
                 $db->query("SHOW COLUMNS FROM `{$join['join_table']}`");
                 $this->table_info[$alias] = $db->result();
             }
