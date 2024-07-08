@@ -3,9 +3,9 @@
 class GPS_config
 {
     // default connection
-    public static $dbname = 'vitasoft_rentallistings'; // Your database name
-    public static $dbuser = 'vitasoft_rentallistings'; // Your database username
-    public static $dbpass = 'Sloka!2020'; // // Your database password
+    public static $dbname = 'u757809403_rentallistings'; // Your database name
+    public static $dbuser = 'u757809403_rentallistings'; // Your database username
+    public static $dbpass = 'Srikanth@1987$'; // // Your database password
     public static $dbhost = 'localhost'; // Your database host, 'localhost' is default.
     
     

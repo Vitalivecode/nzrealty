@@ -76,21 +76,21 @@ class CI_Email {
 	 *
 	 * @var	string
 	 */
-	public $smtp_host	= 'smtppro.zoho.com';
+	public $smtp_host	= 'smtp.zoho.com.au';
 
 	/**
 	 * SMTP Username
 	 *
 	 * @var	string
 	 */
-	public $smtp_user	= 'swamya@vitasoft.in';
+	public $smtp_user	= 'noreply@rentallistings.co.nz';
 
 	/**
 	 * SMTP Password
 	 *
 	 * @var	string
 	 */
-	public $smtp_pass	= 'iNyYhq5HTYdt';
+	public $smtp_pass	= 'jYPas5EdM9qg';
 
 	/**
 	 * SMTP Server port
