@@ -76,7 +76,7 @@ class CI_Email {
 	 *
 	 * @var	string
 	 */
-	public $smtp_host	= 'smtppro.zoho.com';
+	public $smtp_host	= 'smtppro.zoho.com.au';
 
 	/**
 	 * SMTP Username
